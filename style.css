@@ -1,12 +1,12 @@
 :root {
 	--brightYellow: #fec940;
 	--darkYellow: #f5b308;
-	--accentYellow: #feaa3b;
+	--accentYellow: #fe9814;
 	--duration: 5;
 }
 
 body {
-	background-image: url(assets/space.png);
+	background-image: url(assets/space2.png);
 	background-size: cover;
 	font-family: "Black Han Sans", sans-serif;
 }
@@ -24,7 +24,7 @@ body {
 
 .darkYellow {
 	background-color: var(--darkYellow);
-	border: solid;
+	/* border: solid; */
 	border-radius: 25px;
 }
 
@@ -56,6 +56,37 @@ body {
 .fs-7 {
 	font-size: 4em !important;
 }
+
+.newFont {
+	font-family: "Overpass", sans-serif;
+}
+
+
+.sunkenBox {
+	border-radius: 25px;
+	transition: all ease 0.2s;
+}
+
+.box {
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* .box:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+} */
+
+.box2 {
+	box-shadow: inset 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* .box2:hover {
+	transform: translateY(5px);
+	box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+} */
+
+
+
 
 
 
@@ -114,6 +145,17 @@ body {
 .btn3d.btn-primary.active {
 	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
 	background-color: #4274D7;
+}
+
+.btn3d.btn-danger {
+	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #D73814;
+}
+
+.btn3d.btn-danger:active,
+.btn3d.btn-danger.active {
+	box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: #D73814;
 }
 
 

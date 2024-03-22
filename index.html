@@ -12,6 +12,9 @@
 		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
 	<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
 
 
 	<link rel="stylesheet" href="style.css">
@@ -22,7 +25,7 @@
 	<main>
 
 		<div class="container-fluid mb-5">
-			<div class="row py-5">
+			<div class="row py-4">
 				<h1 class="col text-center title">MOON MINER</h1>
 			</div>
 			<div class="row justify-content-center">
@@ -56,30 +59,57 @@
 			<!-- SECTION: BOTTOM DISPLAY BOX -->
 			<div id="bottomBoxes" class="row justify-content-around brightYellow py-3 mx-5">
 
-				<div class="darkYellow col-5">
+				<div class="darkYellow col-5 sunkenBox box2">
 					<div class="row p-2">
+
 						<div class="col">
 							<h5>CLICK UPGRADES</h5>
-							<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center">
-								50&nbsp;
-								<i class="mdi mdi-triforce"></i>
-							</button>
-							<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center">
-								250&nbsp;
-								<i class="mdi mdi-triforce"></i>
-							</button>
+							<span class="d-flex align-items-center">
+								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center">
+									&nbsp;&nbsp;50&nbsp;
+									<i class="mdi mdi-triforce"></i>
+								</button>
+								<h5 class="ms-3 newFont">Knife +1</h5>
+							</span>
+
+							<span class="d-flex align-items-center">
+								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center">
+									250&nbsp;
+									<i class="mdi mdi-triforce"></i>
+								</button>
+								<h5 class="ms-3 newFont">Drill +5</h5>
+							</span>
 						</div>
 
 						<div class="col">
 							<h5>AUTOMATIC UPGRADES</h5>
-							<button class="text-light bg-danger">1k <i class="mdi mdi-triforce"></i></button>
-							<button class="text-light bg-danger">50k <i class="mdi mdi-triforce"></i></button>
+							<span class="d-flex align-items-center">
+								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center">
+									&nbsp;&nbsp;1k&nbsp;
+									<i class="mdi mdi-triforce"></i>
+								</button>
+								<h5 class="ms-3 newFont">
+									Mousetronaut<br />
+									+10 / 3s
+								</h5>
+							</span>
+
+							<span class="d-flex align-items-center">
+								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center">
+									50k&nbsp;
+									<i class="mdi mdi-triforce"></i>
+								</button>
+								<h5 class="ms-3 newFont">
+									Space Station<br />
+									+100 / 3s
+								</h5>
+							</span>
 						</div>
+
 					</div>
 				</div>
 
-
-				<div class="darkYellow col-5">
+				<div class="darkYellow col-5 sunkenBox box2">
 					<div class="row p-2">
 						<div class="col">
 							<h5>CLICK STATS</h5>
@@ -98,7 +128,6 @@
 			</div>
 
 		</div>
-
 	</main>
 </body>
 
