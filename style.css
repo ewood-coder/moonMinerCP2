@@ -1,0 +1,9 @@
+body {
+	background-image: url(assets/space.png);
+	background-size: cover;
+}
+
+.title {
+	font-size: 5em !important;
+	font-family: "Honk", system-ui;
+}
