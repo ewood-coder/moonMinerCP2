@@ -36,7 +36,7 @@ body {
 }
 
 .rcLeft {
-	border-radius: 25px 0 0 25px;
+	border-radius: 25px 0 0 0;
 }
 
 .rcCenter {
@@ -44,8 +44,9 @@ body {
 }
 
 .rcRight {
-	border-radius: 0 25px 25px 0;
+	border-radius: 0 25px 0 0;
 }
+
 
 
 .fs-6 {
@@ -78,4 +79,65 @@ body {
 
 .round-time-bar[data-style="smooth"] div {
 	animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+
+.btn3d {
+	position: relative;
+	top: -6px;
+	border: 0;
+	transition: all 40ms linear;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+	-moz-outline-style: none;
+	outline: medium none;
+}
+
+.btn3d:active,
+.btn3d.active {
+	top: 2px;
+}
+
+.btn3d.btn-primary {
+	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #4274D7;
+}
+
+.btn3d.btn-primary:active,
+.btn3d.btn-primary.active {
+	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: #4274D7;
+}
+
+
+/* ONCLICK FOR IMAGE ANIMATION */
+
+#evilMoon {
+	border: 0;
+	/* outline: @ border; */
+	padding: 1.5rem 2rem;
+	font-size: 4rem;
+	font-family: monospace;
+	box-shadow: 0px 5px 10px rgba(darken(dodgerblue, 40%));
+	transition: all .3s;
+	cursor: pointer;
+	border-radius: 5px;
+	border-bottom: 4px solid lighten(gray, 70%);
+}
+
+#evilMoon:hover {
+	box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+	transform: scale(1.03);
+}
+
+#evilMoon:active {
+	box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+	transform: scale(.98);
 }
