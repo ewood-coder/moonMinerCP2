@@ -1,9 +1,81 @@
+:root {
+	--brightYellow: #fec940;
+	--darkYellow: #f5b308;
+	--accentYellow: #feaa3b;
+	--duration: 5;
+}
+
 body {
 	background-image: url(assets/space.png);
 	background-size: cover;
+	font-family: "Black Han Sans", sans-serif;
 }
 
 .title {
-	font-size: 5em !important;
+	font-size: 6em !important;
 	font-family: "Honk", system-ui;
+}
+
+.brightYellow {
+	background-color: var(--brightYellow);
+	/* border: solid; */
+	border-radius: 25px;
+}
+
+.darkYellow {
+	background-color: var(--darkYellow);
+	border: solid;
+	border-radius: 25px;
+}
+
+.accentYellow {
+	background-color: var(--accentYellow);
+	/* border: solid; */
+	height: 60px;
+	margin-top: 41px;
+}
+
+.rcLeft {
+	border-radius: 25px 0 0 25px;
+}
+
+.rcCenter {
+	border-radius: 25px 25px 0 0;
+}
+
+.rcRight {
+	border-radius: 0 25px 25px 0;
+}
+
+
+.fs-6 {
+	font-size: 3.5em !important;
+}
+
+.fs-7 {
+	font-size: 4em !important;
+}
+
+
+
+
+
+
+.round-time-bar div {
+	height: 5px;
+	animation: roundtime calc(var(--duration) * 1s) steps(var(--duration)) forwards;
+	transform-origin: left center;
+	background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+	background-color: rgb(200, 200, 200);
+}
+
+@keyframes roundtime {
+	to {
+		/* More performant than animating `width` */
+		transform: scaleX(0);
+	}
+}
+
+.round-time-bar[data-style="smooth"] div {
+	animation: roundtime calc(var(--duration) * 1s) linear forwards;
 }
