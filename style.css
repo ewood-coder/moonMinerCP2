@@ -61,6 +61,24 @@ body {
 	font-family: "Overpass", sans-serif;
 }
 
+.borderBox {
+	border: solid;
+	border-color: white;
+	border-width: 1px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	width: 2em;
+}
+
+
+
+
+
+
+
+
+
+
 
 .sunkenBox {
 	border-radius: 25px;
