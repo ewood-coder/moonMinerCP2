@@ -30,7 +30,7 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-2 d-flex" id="evilMoon">
-					<img src="assets/moon.png" alt="" class="h-100 w-100">
+					<img src="assets/moon.png" alt="" class="h-100 w-100" onclick="mine()">
 				</div>
 			</div>
 		</div>
@@ -39,21 +39,21 @@
 		<div class="container-fluid text-light mb-3">
 			<!-- SECTION: TOP 3 DISPLAY BOXES -->
 			<div id="topBoxes" class="row justify-content-center">
-				<div class="accentYellow rcLeft col-1 d-flex justify-content-between">
+				<div class="accentYellow rcLeft col-2 d-flex justify-content-between">
 					<p class="fs-3 pt-3">+66</p>
 					<i class="mdi mdi-gesture-tap fs-1"></i>
 				</div>
-				<div class="brightYellow rcCenter col-2 d-flex justify-content-between">
-					<i class="mdi mdi-triforce fs-7"></i>
-					<span class="fs-6 pt-2">45,068</span>
+				<div class="brightYellow rcCenter col-3 d-flex justify-content-between">
+					<i class="mdi mdi-triforce fs-7 ms-2"></i>
+					<span id="triforce" class="fs-6 pt-3 me-2"></span>
 				</div>
-				<div class="accentYellow rcRight col-1 justify-content-between pt-3">
+				<div class="accentYellow rcRight col-2 d-flex justify-content-between">
 					<!-- NOTE: PROGRESS BAR THAT MOVES WITH THE TIMER FUNCTION -->
 					<!-- <div class="round-time-bar pt-2" style="--duration: 5;">
 						<div class="fs-3"></div>
 					</div> -->
-					<i class="mdi mdi-timer-outline fs-3 me-5"></i>
-					<span class="fs-4 ms-2">+20</span>
+					<i class="mdi mdi-timer-outline fs-1"></i>
+					<p class="fs-3 pt-3">+20</p>
 				</div>
 			</div>
 
@@ -70,7 +70,7 @@
 									&nbsp;&nbsp;50&nbsp;
 									<i class="mdi mdi-triforce"></i>
 								</button>
-								<h5 class="ms-3 newFont">Knife +1</h5>
+								<h5 class="ms-3 newFont">Pickaxe +1</h5>
 							</span>
 
 							<span class="d-flex align-items-center">
@@ -117,7 +117,7 @@
 							<h5>CLICK STATS</h5>
 							<span class="d-flex align-items-center mb-4">
 								<h3 class="borderBox text-center">20</h3>
-								<h5 class="ms-3 newFont me-5">Knives</h5>
+								<h5 class="ms-3 newFont me-4">Pickaxes</h5>
 								<h1><i class="mdi mdi-arrow-right-bold"></i></h1>
 								<h3 class="borderBox ms-3 text-center">20</h3>
 							</span>
@@ -125,7 +125,7 @@
 							<span class="d-flex align-items-center">
 								<h3 class="borderBox text-center">8</h3>
 								<h5 class="ms-3 newFont me-5">Drills</h5>
-								<h1><i class="mdi mdi-arrow-right-bold ms-3"></i></h1>
+								<h1><i class="mdi mdi-arrow-right-bold ms-2"></i></h1>
 								<h3 class="borderBox ms-3 text-center">45</h3>
 							</span>
 						</div>
@@ -134,23 +134,22 @@
 							<h5>AUTOMATIC STATS</h5>
 							<span class="d-flex align-items-center mb-4">
 								<h3 class="borderBox text-center">2</h3>
-								<h5 class="ms-3 newFont me-5">Mousetronauts</h5>
+								<h5 class="ms-3 newFont me-5">Mouse-<br />tronauts</h5>
 								<h1><i class="mdi mdi-timer-outline"></i></h1>
 								<h3 class="borderBox ms-3 text-center">20</h3>
 							</span>
 
 							<span class="d-flex align-items-center">
 								<h3 class="borderBox text-center">0</h3>
-								<h5 class="ms-3 newFont me-5">Space Stations</h5>
+								<h5 class="ms-3 newFont me-5">Space<br />Stations</h5>
 								<h1><i class="mdi mdi-timer-outline"></i></h1>
 								<h3 class="borderBox ms-3 text-center">0</h3>
 							</span>
 						</div>
+
 					</div>
 				</div>
-
 			</div>
-
 		</div>
 	</main>
 </body>
