@@ -59,17 +59,16 @@ body {
 
 .newFont {
 	font-family: "Overpass", sans-serif;
+	text-transform: capitalize;
 }
 
 .borderBox {
 	border: solid;
 	border-color: white;
-	border-width: 1px;
 	padding: 5px 10px;
 	border-radius: 5px;
-	width: 2em;
+	width: auto;
 }
-
 
 
 

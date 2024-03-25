@@ -40,7 +40,7 @@
 			<!-- SECTION: TOP 3 DISPLAY BOXES -->
 			<div id="topBoxes" class="row justify-content-center">
 				<div class="accentYellow rcLeft col-2 d-flex justify-content-between">
-					<p class="fs-3 pt-3">+66</p>
+					<p id="clickCollectorCount" class="fs-3 pt-3">+0</p>
 					<i class="mdi mdi-gesture-tap fs-1"></i>
 				</div>
 				<div class="brightYellow rcCenter col-3 d-flex justify-content-between">
@@ -53,7 +53,7 @@
 						<div class="fs-3"></div>
 					</div> -->
 					<i class="mdi mdi-timer-outline fs-1"></i>
-					<p class="fs-3 pt-3">+20</p>
+					<p id="autoCollectorCount" class="fs-3 pt-3">+0</p>
 				</div>
 			</div>
 
@@ -66,7 +66,8 @@
 						<div class="col">
 							<h5>CLICK UPGRADES</h5>
 							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center">
+								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center"
+									onclick="buyClickUpgrade('pickaxe')">
 									&nbsp;&nbsp;50&nbsp;
 									<i class="mdi mdi-triforce"></i>
 								</button>
@@ -74,7 +75,8 @@
 							</span>
 
 							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center">
+								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center"
+									onclick="buyClickUpgrade('drill')">
 									250&nbsp;
 									<i class="mdi mdi-triforce"></i>
 								</button>
@@ -85,18 +87,20 @@
 						<div class="col">
 							<h5>AUTOMATIC UPGRADES</h5>
 							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center">
+								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
+									onclick="buyAutomaticUpgrade('mousetronaut')">
 									&nbsp;&nbsp;1k&nbsp;
 									<i class="mdi mdi-triforce"></i>
 								</button>
 								<h5 class="ms-3 newFont">
-									Mousetronaut<br />
+									Mousetronauts<br />
 									+10 / 3s
 								</h5>
 							</span>
 
 							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center">
+								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
+									onclick="buyAutomaticUpgrade('space station')">
 									50k&nbsp;
 									<i class="mdi mdi-triforce"></i>
 								</button>
@@ -115,36 +119,40 @@
 
 						<div class="col">
 							<h5>CLICK STATS</h5>
-							<span class="d-flex align-items-center mb-4">
-								<h3 class="borderBox text-center">20</h3>
-								<h5 class="ms-3 newFont me-4">Pickaxes</h5>
-								<h1><i class="mdi mdi-arrow-right-bold"></i></h1>
-								<h3 class="borderBox ms-3 text-center">20</h3>
-							</span>
+							<div id="clickUpgradeCount">
+								<span class="d-flex align-items-center mb-4">
+									<h3 class="borderBox text-center">0</h3>
+									<h5 class="ms-3 newFont me-4">Pickaxes</h5>
+									<h1><i class="mdi mdi-arrow-right-bold"></i></h1>
+									<h3 class="borderBox ms-3 text-center">0</h3>
+								</span>
 
-							<span class="d-flex align-items-center">
-								<h3 class="borderBox text-center">8</h3>
-								<h5 class="ms-3 newFont me-5">Drills</h5>
-								<h1><i class="mdi mdi-arrow-right-bold ms-2"></i></h1>
-								<h3 class="borderBox ms-3 text-center">45</h3>
-							</span>
+								<span class="d-flex align-items-center">
+									<h3 class="borderBox text-center">0</h3>
+									<h5 class="ms-3 newFont me-5">Drills</h5>
+									<h1><i class="mdi mdi-arrow-right-bold ms-2"></i></h1>
+									<h3 class="borderBox ms-3 text-center">0</h3>
+								</span>
+							</div>
 						</div>
 
 						<div class="col">
 							<h5>AUTOMATIC STATS</h5>
-							<span class="d-flex align-items-center mb-4">
-								<h3 class="borderBox text-center">2</h3>
-								<h5 class="ms-3 newFont me-5">Mouse-<br />tronauts</h5>
-								<h1><i class="mdi mdi-timer-outline"></i></h1>
-								<h3 class="borderBox ms-3 text-center">20</h3>
-							</span>
+							<div id="automaticUpgradeCount">
+								<span class="d-flex align-items-center mb-4">
+									<h3 class="borderBox text-center">0</h3>
+									<h5 class="ms-3 newFont me-5">Mouse-<br />tronauts</h5>
+									<h1><i class="mdi mdi-timer-outline"></i></h1>
+									<h3 class="borderBox ms-3 text-center">0</h3>
+								</span>
 
-							<span class="d-flex align-items-center">
-								<h3 class="borderBox text-center">0</h3>
-								<h5 class="ms-3 newFont me-5">Space<br />Stations</h5>
-								<h1><i class="mdi mdi-timer-outline"></i></h1>
-								<h3 class="borderBox ms-3 text-center">0</h3>
-							</span>
+								<span class="d-flex align-items-center">
+									<h3 class="borderBox text-center">0</h3>
+									<h5 class="ms-3 newFont me-5">Space<br />Stations</h5>
+									<h1><i class="mdi mdi-timer-outline"></i></h1>
+									<h3 class="borderBox ms-3 text-center">0</h3>
+								</span>
+							</div>
 						</div>
 
 					</div>
