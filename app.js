@@ -26,7 +26,7 @@ let automaticUpgrades = [
 		multiplier: 10
 	},
 	{
-		name: 'space station',
+		name: 'space-station',
 		emoji: '🛰️',
 		price: 50000,
 		quantity: 0,
@@ -60,6 +60,7 @@ function updateTriforce() {
 }
 
 
+// NOTE: Functions for buying and updating upgrades
 function buyClickUpgrade(name) {
 	let upgrade = clickUpgrades.find((upgrade) => upgrade.name == name)
 	if (triforce < upgrade.price) {
@@ -70,11 +71,13 @@ function buyClickUpgrade(name) {
 	else {
 		triforce -= upgrade.price
 		upgrade.quantity++
+		upgrade.price += 100
 		console.log("Purchased:", upgrade.emoji, upgrade.name, upgrade.emoji)
 		console.log("Quantity Held:", upgrade.quantity)
 		console.log("")
 	}
 
+	updateClickButtons()
 	updateClickUpgradesCount()
 	updateTriforce()
 }
@@ -100,7 +103,7 @@ function updateClickUpgradesCount() {
 
 
 	// NOTE: This is the part that affects the auto clicker display
-	let initialValue = 0
+	let initialValue = 1
 	let clickCountElem = document.getElementById('clickCollectorCount')
 
 	const collectorCount = clickUpgrades.reduce(
@@ -120,11 +123,13 @@ function buyAutomaticUpgrade(name) {
 	else {
 		triforce -= upgrade.price
 		upgrade.quantity++
+		upgrade.price += 500
 		console.log("Purchased:", upgrade.emoji, upgrade.name, upgrade.emoji)
 		console.log("Quantity Held:", upgrade.quantity)
 		console.log("")
 	}
 
+	updateAutoButtons()
 	updateAutomaticUpgradesCount()
 	updateTriforce()
 }
@@ -161,7 +166,27 @@ function updateAutomaticUpgradesCount() {
 }
 
 
+// NOTE: Updates the pricing on the HTML of buttons
+function updateClickButtons() {
+	let initialValue = 0
 
+	clickUpgrades.forEach((upgrade) => {
+		let clickButtonElem = document.getElementById(upgrade.name + '-btn')
+		clickButtonElem.innerHTML = `${upgrade.price}&nbsp;<i class="mdi mdi-triforce"></i>`
+	})
+}
+
+function updateAutoButtons() {
+	let initialValue = 0
+
+	automaticUpgrades.forEach((upgrade) => {
+		let autoButtonElem = document.getElementById(upgrade.name + '-btn')
+		autoButtonElem.innerHTML = `${upgrade.price}&nbsp;<i class="mdi mdi-triforce"></i>`
+	})
+}
+
+
+// NOTE: function for collecting the auto upgrades
 function collectAutoUpgrades() {
 	let initialValue = 0
 

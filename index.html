@@ -40,7 +40,7 @@
 			<!-- SECTION: TOP 3 DISPLAY BOXES -->
 			<div id="topBoxes" class="row justify-content-center">
 				<div class="accentYellow rcLeft col-2 d-flex justify-content-between">
-					<p id="clickCollectorCount" class="fs-3 pt-3">+0</p>
+					<p id="clickCollectorCount" class="fs-3 pt-3">+1</p>
 					<i class="mdi mdi-gesture-tap fs-1"></i>
 				</div>
 				<div class="brightYellow rcCenter col-3 d-flex justify-content-between">
@@ -65,17 +65,21 @@
 
 						<div class="col">
 							<h5>CLICK UPGRADES</h5>
-							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center"
-									onclick="buyClickUpgrade('pickaxe')">
-									&nbsp;&nbsp;50&nbsp;
-									<i class="mdi mdi-triforce"></i>
-								</button>
-								<h5 class="ms-3 newFont">Pickaxe +1</h5>
+							<span>
+								<span class="d-flex align-items-center">
+									<button id="pickaxe-btn" type="button"
+										class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center"
+										onclick="buyClickUpgrade('pickaxe')">
+										&nbsp;&nbsp;50&nbsp;
+										<i class="mdi mdi-triforce"></i>
+									</button>
+									<h5 class="ms-3 newFont">Pickaxe +1</h5>
+								</span>
 							</span>
 
 							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center"
+								<button id="drill-btn" type="button"
+									class="btn btn-primary btn3d fs-4 d-flex my-3 px-5 text-center"
 									onclick="buyClickUpgrade('drill')">
 									250&nbsp;
 									<i class="mdi mdi-triforce"></i>
@@ -86,21 +90,25 @@
 
 						<div class="col">
 							<h5>AUTOMATIC UPGRADES</h5>
-							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
-									onclick="buyAutomaticUpgrade('mousetronaut')">
-									&nbsp;&nbsp;1k&nbsp;
-									<i class="mdi mdi-triforce"></i>
-								</button>
-								<h5 class="ms-3 newFont">
-									Mousetronauts<br />
-									+10 / 3s
-								</h5>
+							<span id="autoButtons">
+								<span class="d-flex align-items-center">
+									<button id="mousetronaut-btn" type="button"
+										class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
+										onclick="buyAutomaticUpgrade('mousetronaut')">
+										&nbsp;&nbsp;1k&nbsp;
+										<i class="mdi mdi-triforce"></i>
+									</button>
+									<h5 class="ms-3 newFont">
+										Mousetronauts<br />
+										+10 / 3s
+									</h5>
+								</span>
 							</span>
 
 							<span class="d-flex align-items-center">
-								<button type="button" class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
-									onclick="buyAutomaticUpgrade('space station')">
+								<button id="space-station-btn" type="button"
+									class="btn btn-danger btn3d fs-4 d-flex my-3 px-5 text-center"
+									onclick="buyAutomaticUpgrade('space-station')">
 									50k&nbsp;
 									<i class="mdi mdi-triforce"></i>
 								</button>
